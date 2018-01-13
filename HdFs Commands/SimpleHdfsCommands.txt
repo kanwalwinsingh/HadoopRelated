@@ -1,0 +1,42 @@
+
+to create a directory:-
+
+hadoop fs -mkdir /user/waheguru/firstDirectory
+
+
+copyFileSystemtolocalFilesystem:-
+
+hadoop fs -copyFromLocal /home/waheguru/Development/ImportantDocs /user/waheguru/firstDirectory
+
+PUT:-
+
+hadoop fs -put /home/waheguru/Development/ImportantDocs /user/waheguru/firstDirectory
+
+Check the files in the file system:-
+
+hadoop fs -ls /user/waheguru/firstDirectory/ImportantDocs
+
+from hadoop to local:-
+hadoop fs -copyToLocal /user/waheguru/firstDirectory /home/waheguru/Development/ImportantDocs/test 
+
+From hadoop to local get:-
+
+hadoop fs -get /user/waheguru/firstDirectory /home/waheguru/Development/ImportantDocs/test
+
+to remove a file:-
+
+hadoop fs -rm /user/waheguru/firstDirectory/ImportantDocs/test
+
+safe node leave command:-
+
+hadoop fs -safenode leave
+
+hadoop fs admin -safenode leave
+
+/// another usefull commands:-
+
+hadoop fsck /user/waheguru/firstDirectory/ImportantDocs
+
+hadoop dfsadmin -report
+
+hadoop dfsadmin -refreshNodes
